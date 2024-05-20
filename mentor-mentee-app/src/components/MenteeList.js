@@ -16,9 +16,11 @@ const MenteeList = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4">
       {mentees.map(mentee => (
-        <div key={mentee.id} className="border p-4 rounded-lg shadow-lg">
-          <img src={mentee.image} alt={mentee.name} className="w-full h-48 object-cover rounded-lg" />
-          <h3 className="text-lg font-semibold mt-2 text-center">{mentee.name}</h3>
+        <div key={mentee.id} className="border p-4 rounded-lg shadow-lg text-center">
+          <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500 shadow-lg">
+            <img src={mentee.image} alt={mentee.name} className="w-full h-full object-cover" />
+          </div>
+          <h3 className="text-lg font-semibold mt-2">{mentee.name}</h3>
           <Link to={`/chat/${mentee.id}`} className="block text-center text-blue-500 hover:underline">Chat</Link>
         </div>
       ))}
