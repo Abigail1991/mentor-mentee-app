@@ -3,16 +3,16 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 const mentors = [
-  { id: 1, name: 'Alice Opoku', image: '/Images/1.jpg' },
-  { id: 2, name: 'Bob Smith', image: '/Images/2.jpg' },
-  { id: 3, name: 'Charlie Brown', image: '/Images/3.jpg' },
-  { id: 4, name: 'Daniel Green', image: '/Images/4.jpg' }
+  { id: 1, name: 'Abigail Opoku', image: '/Images/1.jpg' },
+  { id: 2, name: 'Emmanuel Gyan', image: '/Images/2.jpg' },
+  { id: 3, name: 'Deborah Sakyi', image: '/Images/3.jpg' },
+  { id: 4, name: 'Doreen Ampadu', image: '/Images/4.jpg' }
 ];
 
 const mentees = [
-  { id: 5, name: 'Eva Adams', image: '/Images/5.jpg' },
-  { id: 6, name: 'Frank Johnson', image: '/Images/6.jpg' },
-  { id: 7, name: 'Grace Lee', image: '/Images/7.jpg' }
+  { id: 5, name: 'Nana Yaa', image: '/Images/5.jpg' },
+  { id: 6, name: 'Akosua Frema', image: '/Images/6.jpg' },
+  { id: 7, name: 'Grace Opare', image: '/Images/7.jpg' }
 ];
 
 const Chat = () => {
