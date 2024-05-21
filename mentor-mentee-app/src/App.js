@@ -1,5 +1,6 @@
 // src/App.js
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MentorList from './components/MentorList';
 import MenteeList from './components/MenteeList';
@@ -8,6 +9,14 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Homepage from './components/Homepage';
 import './App.css';
+import i18n from './i18n';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 function App() {
   return (
