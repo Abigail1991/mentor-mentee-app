@@ -2,10 +2,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser, FaLink, FaHeart, FaBullseye, FaEye, FaHandshake } from 'react-icons/fa';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 import menteeImage from '../Images/5.jpg';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import menImage from '../Images/men.jpeg'; // Ensure these paths are correct
+import men1Image from '../Images/men1.jpeg';
+import men2Image from '../Images/men2.jpeg';
+import men3Image from '../Images/men3.jpeg';
+import men4Video from '../Images/men4.mp4'; // Video file
 import LanguageSelector from './LanguageSelector';
 import { useTranslation } from 'react-i18next';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import './Homepage.css'; // Make sure to create this CSS file
 
 const sharedValues = [
@@ -34,6 +41,30 @@ const Homepage = () => {
   return (
     <div className="p-4 bg-white">
       <LanguageSelector />
+      <section className="mb-8 mt-4">
+        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
+          <div>
+            <img src={menImage} alt="Men" />
+            <p className="legend">Need to speak to a mentor? <Link to="/signin" className="text-blue-600 hover:underline">Sign in</Link></p>
+          </div>
+          <div>
+            <img src={men1Image} alt="Men1" />
+            <p className="legend">Need to speak to a mentor? <Link to="/signin" className="text-blue-600 hover:underline">Sign in</Link></p>
+          </div>
+          <div>
+            <img src={men2Image} alt="Men2" />
+            <p className="legend">Need to speak to a mentor? <Link to="/signin" className="text-blue-600 hover:underline">Sign in</Link></p>
+          </div>
+          <div>
+            <img src={men3Image} alt="Men3" />
+            <p className="legend">Need to speak to a mentor? <Link to="/signin" className="text-blue-600 hover:underline">Sign in</Link></p>
+          </div>
+          <div>
+            <video src={men4Video} controls />
+            <p className="legend">Need to speak to a mentor? <Link to="/signin" className="text-blue-600 hover:underline">Sign in</Link></p>
+          </div>
+        </Carousel>
+      </section>
       <section className="mb-8 mt-4">
         <h1 className="text-4xl font-bold mb-4 text-center">{t('Welcome')}</h1>
         <p>{t('Welcome to our mentoring platform where mentors and mentees can connect for a deeper learning experience. Our goal is to foster an environment of growth and development through meaningful connections.')}</p>
@@ -64,7 +95,7 @@ const Homepage = () => {
         <h2 className="text-3xl font-bold mb-4">Shared Values</h2>
         <div className="border p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 inline-block">
           <TransitionGroup component="ul" className="list-disc list-inside text-left mx-auto max-w-md">
-            <CSSTransition key={sharedValues[index].id} timeout={500} classNames="fade">
+            <CSSTransition key={sharedValues[index].id} timeout={100} classNames="fade">
               <li className="my-2">{sharedValues[index].icon}{t(sharedValues[index].text)}</li>
             </CSSTransition>
           </TransitionGroup>

@@ -21,7 +21,7 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .footer-links {
@@ -38,6 +38,6 @@ code {
 }
 
 .social-icons img {
-  width: 30px;
+  width: 10px;
   height: auto;
 }
