@@ -4,7 +4,7 @@ import logo from '../Images/logo.png'; // Make sure to adjust the path if needed
 
 const Header = () => {
   return (
-    <header className="bg-black text-gold p-4 fixed top-0 w-full z-10">
+    <header className="bg-black text-gold p-4">
       <nav className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
